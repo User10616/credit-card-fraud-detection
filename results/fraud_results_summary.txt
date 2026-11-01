@@ -1,0 +1,20 @@
+CREDIT CARD FRAUD DETECTION - RESULTS SUMMARY
+=======================================================
+
+Dataset: 284807 transactions, 492 frauds (0.173%)
+Train/test split: 75/25, stratified. SMOTE applied to train only (leakage-safe)
+
+Model Performance (test set):
+              Model   PR-AUC  ROC-AUC
+Logistic Regression 0.713285 0.974293
+      Random Forest 0.815219 0.970038
+            XGBoost 0.862975 0.976303
+
+Best model: XGBoost
+
+Cost-Sensitive Threshold Optimization:
+  No detection baseline loss: $13,269.38
+  Default threshold (0.5) cost: $4,308.66
+  Optimized threshold (0.23) cost: $4,059.97
+  Reduction vs no detection: 69.4%
+  Reduction vs default threshold: 5.8%
